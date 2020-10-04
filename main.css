@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#game{
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    /* position: relative; */
+    background: rgba(255, 255, 255, 1.0);
+    background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 1.0), rgba(224, 255, 252, 1.0));
+    background: -moz-linear-gradient(bottom, rgba(255, 255, 255, 1.0), rgba(224, 255, 252, 1.0));
+    background: linear-gradient(to top, rgba(255, 255, 255, 1.0), rgba(224, 255, 252, 1.0));
+}
+
+#character{
+    width: 50px;
+    height: 40px;
+    /* background-color: red; */
+    position: relative;
+    top: 150px;
+    background: #fafafa url(img/naruto.gif) no-repeat center center;  
+    background-size: 50px;
+}
+
+#block{
+    width: 20px;
+    height: 20px;
+    background-color: grey;
+    position: relative;
+    top: 130px;
+    left: 480px;
+    animation: block 1000ms linear infinite;
+    background: #fafafa url(img/suriken.gif) no-repeat center center;  
+    background-size: 20px;
+}
+
+.animate{
+    animation: jump .5s;
+}
+
+@keyframes block{
+    0%{
+        left:480px;
+    }
+    100%{
+        left:-40px;
+    }
+}
+
+@keyframes jump{
+    0%{
+        top:150px;
+    }
+    30%{
+        top:100px;
+    }
+    70%{
+        top:100px;
+    }
+    100%{
+        top:150px;
+    }
+}
+
+#bottom-score{
+    color:orangered;
+    margin-top: 5px;
+    width: 500px;
+    position: relative;
+    left:20%;
+    /* transform: translateX(-50); */
+}
+
+#gameover{
+    color:orangered;
+    margin-top: 5px;
+    width: 500px;
+    position: relative;
+    left:18%;
+}
+
+.gameover-show{
+    display: show;
+}
+.gameover-hide{
+    display: none;
+}
